@@ -1,0 +1,28 @@
+{
+  "name": "gn-cli",
+  "version": "1.0.0",
+  "description": "A bundle of utility commands for my development workflow.",
+  "main": "index.js",
+  "bin": {
+    "gn": "index.js"
+  },
+  "author": "Gus Nordhielm",
+  "license": "ISC",
+  "dependencies": {
+    "ansi-escapes": "^3.0.0",
+    "chalk": "^2.0.0",
+    "cli-cursor": "^2.1.0",
+    "cli-width": "^2.0.0",
+    "external-editor": "^2.0.4",
+    "figures": "^2.0.0",
+    "lodash": "^4.3.0",
+    "mute-stream": "0.0.7",
+    "run-async": "^2.2.0",
+    "rx-lite": "^4.0.8",
+    "rx-lite-aggregates": "^4.0.8",
+    "string-width": "^2.1.0",
+    "strip-ansi": "^4.0.0",
+    "through": "^2.3.6",
+    "shelljs": "^0.7.8"
+  }
+}
