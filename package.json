@@ -6,6 +6,7 @@
   "bin": {
     "gn": "index.js"
   },
+  "repository": "https://github.com/gnordhielm/gn-cli",
   "author": "Gus Nordhielm",
   "license": "ISC",
   "dependencies": {
