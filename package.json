@@ -1,6 +1,6 @@
 {
   "name": "gn-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A bundle of utility commands for my development workflow.",
   "main": "index.js",
   "bin": {
@@ -21,9 +21,10 @@
     "run-async": "^2.2.0",
     "rx-lite": "^4.0.8",
     "rx-lite-aggregates": "^4.0.8",
+    "shelljs": "^0.7.8",
     "string-width": "^2.1.0",
     "strip-ansi": "^4.0.0",
     "through": "^2.3.6",
-    "shelljs": "^0.7.8"
+    "yargs": "^9.0.1"
   }
 }
