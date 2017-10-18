@@ -1,6 +1,6 @@
 {
   "name": "gn-cli",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "A bundle of utility commands for my development workflow.",
   "bin": {
     "gn": "./dist/index.js"
