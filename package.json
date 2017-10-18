@@ -2,16 +2,20 @@
   "name": "gn-cli",
   "version": "1.0.1",
   "description": "A bundle of utility commands for my development workflow.",
-  "main": "index.js",
   "bin": {
-    "gn": "index.js"
+    "gn": "./dist/index.js"
   },
   "repository": "https://github.com/gnordhielm/gn-cli",
   "author": "Gus Nordhielm",
   "license": "ISC",
   "dependencies": {
     "ansi-escapes": "^3.0.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
     "chalk": "^2.0.0",
+    "clean-webpack-plugin": "^0.1.17",
     "cli-cursor": "^2.1.0",
     "cli-width": "^2.0.0",
     "external-editor": "^2.0.4",
@@ -25,6 +29,8 @@
     "string-width": "^2.1.0",
     "strip-ansi": "^4.0.0",
     "through": "^2.3.6",
+    "uglifyjs-webpack-plugin": "^1.0.0-beta.3",
+    "webpack": "^3.8.1",
     "yargs": "^9.0.1"
   }
 }
