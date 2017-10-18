@@ -2,6 +2,17 @@ const path    = require('path')
 const webpack = require('webpack')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
+const fs = require('fs')
+
+const nodeModules = {}
+
+fs.readdirSync('node_modules')
+  .filter(function(x) {
+    return ['.bin'].indexOf(x) === -1
+  })
+  .forEach(function(mod) {
+    nodeModules[mod] = 'commonjs ' + mod
+  })
 
 module.exports = {
 
@@ -14,19 +25,22 @@ module.exports = {
     path: path.resolve(__dirname, 'dist')
   },
 
-  // module: {
-  //   rules: [
 
-  //     {
-  //       test: /\.js$/,
-  //       exclude: /(node_modules)/,
-  //       use: [{
-  //         loader: 'babel-loader',
-  //         options: {
-  //           presets: ['es2015', 'stage-0'],
-  //         }
-  //       }]
-  //     },
+  externals: nodeModules,
+
+  module: {
+    rules: [
+
+      {
+        test: /\.js$/,
+        exclude: /(node_modules)/,
+        use: [{
+          loader: 'babel-loader',
+          options: {
+            presets: ['es2015', 'stage-0'],
+          }
+        }]
+      },
 
   //     {
   //       test: /\.html$/,
@@ -38,12 +52,12 @@ module.exports = {
   //       use: ['url-loader']
   //     }
 
-  //   ]
-  // },
+    ]
+  },
 
   plugins: [
 
-  //   new CleanWebpackPlugin(['dist']),
+    // new CleanWebpackPlugin(['dist']),
 
   //   new UglifyJSPlugin({
   //     parallel: {
@@ -57,6 +71,8 @@ module.exports = {
       raw: true
     })
 
-  ]
+  ],
+  
+  devtool: 'sourcemap'
   
 }
